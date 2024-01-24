@@ -1,6 +1,6 @@
 from collections import deque
 
-n, m = list(map(int, input().split()))
+n, m = map(int, input().split())
 
 map = [[0] * m for _ in range(n)]
 
@@ -11,7 +11,6 @@ for i in range(n):
 
 
 def bfs(map) -> int:
-    global n, m
     q = deque()
     visited = [[False] * m for _ in range(n)]
     q.append([0, 0])
