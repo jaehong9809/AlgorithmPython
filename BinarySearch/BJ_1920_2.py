@@ -1,3 +1,4 @@
+from bisect import bisect_left
 n = int(input())
 
 data = list(map(int, input().split(" ")))
@@ -25,7 +26,4 @@ def binary_search(target, data):
 targets = list(map(int, input().split(" ")))
 
 for target in targets:
-    if binary_search(target, data):
-        print(1)
-    else:
-        print(0)
+    print(bisect_left(data, target))
